@@ -137,8 +137,9 @@ CREATE TABLE CLIENTE_TIPO_PAGO (
 CREATE TABLE RESERVA(
 	Id_Reserva INTEGER NOT NULL,
 	Pago REAL NULL,
-	Fecha_Hora_Entrada DATE NOT NULL,
-	Fecha_Hora_Salida DATE NULL,
+	Fecha_Hora_Entrada DATETIME NOT NULL,
+	Fecha_Hora_Salida DATETIME NULL,
+	Hora_Impresion TIME NULL, 
 	Id_Empleado INTEGER NOT NULL,
 	Id_Cliente INTEGER NOT NULL,
 	FOREIGN KEY (Id_Cliente) REFERENCES CLIENTE (Id_Cliente),
