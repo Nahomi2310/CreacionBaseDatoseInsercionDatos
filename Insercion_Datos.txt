@@ -98,6 +98,14 @@ INSERT (Id_Cliente, Id_Tipo_Pago)INTO CLIENTE_TIPO_PAGO Values (1073,222);
 INSERT INTO CLIENTE_TIPO_PAGO Values (5887,111, '233-222-111');
 
 -- Reserva
-INSERT (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) INTO RESERVA Values (2010,130000,'15-05-2018 12:10:05.123',5020,5887);
-INSERT (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) INTO RESERVA Values (2020,140000,'13-05-2018 02:15:10.123',5010,1073);
+INSERT INTO RESERVA (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) Values (2010,130000,'15-05-2018 07:15',5020,5887);
+INSERT INTO RESERVA (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) Values (2020,140000,'13-05-2018 12:13',5010,1073);
+
+-- Reserva_Habitacion
+
+INSERT INTO RESERVA_HABITACION Values (2010,01,'15-05-2018','19-05-2018');
+INSERT INTO RESERVA_HABITACION Values (2020,02,'13-05-2018','16-05-2018');
+
+
+
 
