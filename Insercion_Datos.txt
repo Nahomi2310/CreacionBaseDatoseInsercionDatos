@@ -1,0 +1,103 @@
+-- Tipo_Documento
+INSERT INTO TIPO_DOC Values (1,'Cedula');
+INSERT INTO TIPO_DOC Values (2,'Cedula');
+INSERT INTO TIPO_DOC Values (3,'Tarjeta');
+INSERT INTO TIPO_DOC Values (4,'Tarjeta');
+INSERT INTO TIPO_DOC Values (5,'Cedula');
+INSERT INTO TIPO_DOC Values (6,'Cedula');
+
+-- Nacionalidad
+
+INSERT INTO NACIONALIDAD Values (10,'Colombiano');
+INSERT INTO NACIONALIDAD Values (11,'Colombiana');
+INSERT INTO NACIONALIDAD Values (12,'Mexicano');
+INSERT INTO NACIONALIDAD Values (13,'Mexicana');
+INSERT INTO NACIONALIDAD Values (14,'Colombiano');
+INSERT INTO NACIONALIDAD Values (15,'Colombiano');
+
+-- Persona
+
+INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3010,10,1, 'Luis Perez');
+INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3020,11,3, 'Camila Perez');
+INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3040,12,2, 'Jose Suarez');
+INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3050,13,4, 'Andrea Suarez');
+INSERT INTO PERSONA Values (3060,14,5, 'Bryan Ruiz', 'Bruiz23@gmail.com');
+INSERT INTO PERSONA Values (3080,15,6, 'Jairo Vargas', 'jvargasadmi@gmail.com');
+
+-- Cargo
+
+INSERT INTO CARGO Values (015, 'Recepcionista');
+INSERT INTO CARGO Values (02, 'Administrador');
+
+-- Empleado
+
+INSERT INTO EMPLEADO Values (5010,'lorac23', 02,3060 );
+INSERT INTO EMPLEADO Values (5020,'lien32', 015,3080);
+
+--  Nombre_Servicio
+
+INSERT INTO NOMBRE_SERVICIO Values (910,'Jabon');
+INSERT INTO NOMBRE_SERVICIO Values (920,'Cerveza');
+
+
+--Categoria
+
+INSERT INTO CATEGORIA Values (911,'Aseo' );
+INSERT INTO CATEGORIA Values (922,'Bebidas Alcolicas');
+
+--- Servicio
+
+INSERT INTO SERVICIO Values (791,920,922,'Despues lo ponemos :v',3000);
+INSERT INTO SERVICIO Values (793,910,911,'Despues lo ponemos x2',1500);
+
+-- Tipo_Habitacion
+
+INSERT INTO TIPO_HABITACION Values (100,'Sencilla');
+INSERT INTO TIPO_HABITACION Values (200,'Doble');
+
+-- Habitacion
+
+INSERT INTO HABITACION Values (01,200,350000,'Habitacion con dos camas',4);
+INSERT INTO HABITACION Values (02,100,220000,'Habitacion con una cama',2);
+
+-- Habitacion_Servicio
+
+INSERT INTO HABITACION_SERVICIO Values (01,791,2);
+INSERT INTO HABITACION_SERVICIO Values (02,793,1);
+
+-- Entidad
+
+INSERT INTO ENTIDAD  Values (321,'Banco Bogota');
+INSERT INTO ENTIDAD  Values (421,'Billetera');
+
+-- Nombre_TP
+
+INSERT INTO NOMBRE_TP Values (1515,'Efectivo');
+INSERT INTO NOMBRE_TP Values (1212,'Bancario');
+
+-- Tipo_Pago
+
+INSERT INTO TIPO_PAGO Values (222,421,1515);
+INSERT INTO TIPO_PAGO Values (111,321,1212);
+
+-- Cliente
+
+INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (1073,3010,02);
+INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (9809,3020,02);
+INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (5887,3040,01);
+INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (9910,3050,01);
+
+-- Telofono_Cliente
+
+INSERT INTO TELEFONO_CLIENTE Values (3142748120,1073);
+INSERT INTO TELEFONO_CLIENTE Values (3214647340,5887);
+
+-- Cliente_Tipo_Pago
+
+INSERT (Id_Cliente, Id_Tipo_Pago)INTO CLIENTE_TIPO_PAGO Values (1073,222);
+INSERT INTO CLIENTE_TIPO_PAGO Values (5887,111, '233-222-111');
+
+-- Reserva
+INSERT (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) INTO RESERVA Values (2010,130000,'15-05-2018 12:10:05.123',5020,5887);
+INSERT (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) INTO RESERVA Values (2020,140000,'13-05-2018 02:15:10.123',5010,1073);
+
