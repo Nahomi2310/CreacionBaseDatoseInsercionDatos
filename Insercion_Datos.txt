@@ -17,10 +17,10 @@ INSERT INTO NACIONALIDAD Values (15,'Colombiano');
 
 -- Persona
 
-INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3010,10,1, 'Luis Perez');
-INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3020,11,3, 'Camila Perez');
-INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3040,12,2, 'Jose Suarez');
-INSERT (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) INTO PERSONA Values (3050,13,4, 'Andrea Suarez');
+INSERT INTO PERSONA(Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre)  Values (3010,10,1, 'Luis Perez');
+INSERT INTO PERSONA (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) Values (3020,11,3, 'Camila Perez');
+INSERT INTO PERSONA (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) Values (3040,12,2, 'Jose Suarez');
+INSERT INTO PERSONA (Id_Persona, Id_Nacio,ID_Tipo_Doc,Nombre) Values (3050,13,4, 'Andrea Suarez');
 INSERT INTO PERSONA Values (3060,14,5, 'Bryan Ruiz', 'Bruiz23@gmail.com');
 INSERT INTO PERSONA Values (3080,15,6, 'Jairo Vargas', 'jvargasadmi@gmail.com');
 
@@ -82,19 +82,19 @@ INSERT INTO TIPO_PAGO Values (111,321,1212);
 
 -- Cliente
 
-INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (1073,3010,02);
-INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (9809,3020,02);
-INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (5887,3040,01);
-INSERT (Id_Cliente,Id_Persona,Nro_Habitacion) INTO CLIENTE Values (9910,3050,01);
+INSERT INTO CLIENTE (Id_Cliente,Id_Persona,Nro_Habitacion) Values (1073,3010,02);
+INSERT INTO CLIENTE (Id_Cliente,Id_Persona,Nro_Habitacion) Values (9809,3020,02);
+INSERT INTO CLIENTE (Id_Cliente,Id_Persona,Nro_Habitacion) Values (5887,3040,01);
+INSERT INTO CLIENTE (Id_Cliente,Id_Persona,Nro_Habitacion) Values (9910,3050,01);
 
 -- Telofono_Cliente
 
-INSERT INTO TELEFONO_CLIENTE Values (3142748120,1073);
-INSERT INTO TELEFONO_CLIENTE Values (3214647340,5887);
+INSERT INTO TELEFONO_CLIENTE Values (31427,1073);
+INSERT INTO TELEFONO_CLIENTE Values (32146,5887);
 
 -- Cliente_Tipo_Pago
 
-INSERT (Id_Cliente, Id_Tipo_Pago)INTO CLIENTE_TIPO_PAGO Values (1073,222);
+INSERT INTO CLIENTE_TIPO_PAGO (Id_Cliente, Id_Tipo_Pago) Values (1073,222);
 INSERT INTO CLIENTE_TIPO_PAGO Values (5887,111, '233-222-111');
 
 -- Reserva
@@ -105,7 +105,3 @@ INSERT INTO RESERVA (Id_Reserva,Pago,Fecha_Hora_Entrada,Id_Empleado,Id_Cliente) 
 
 INSERT INTO RESERVA_HABITACION Values (2010,01,'15-05-2018','19-05-2018');
 INSERT INTO RESERVA_HABITACION Values (2020,02,'13-05-2018','16-05-2018');
-
-
-
-
