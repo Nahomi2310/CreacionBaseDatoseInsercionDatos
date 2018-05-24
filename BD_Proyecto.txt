@@ -142,6 +142,7 @@ CREATE TABLE RESERVA(
 	Hora_Impresion TIME NULL, 
 	Id_Empleado INTEGER NOT NULL,
 	Id_Cliente INTEGER NOT NULL,
+	Cantidad INTEGER NOT NULL,
 	FOREIGN KEY (Id_Cliente) REFERENCES CLIENTE (Id_Cliente),
 	FOREIGN KEY (Id_Empleado) REFERENCES EMPLEADO(Id_Empleado),
 	PRIMARY KEY(Id_Reserva)
@@ -152,7 +153,6 @@ CREATE TABLE RESERVA_HABITACION(
 	Nro_Habitacion INTEGER NOT NULL,
 	Fecha_Llegada DATE NOT NULL,
 	Fecha_Salida DATE NOT NULL,
-	Cantidad INTEGER NOT NULL,
 	FOREIGN KEY (Id_Reserva) REFERENCES RESERVA(Id_Reserva),
 	FOREIGN KEY (Nro_Habitacion) REFERENCES HABITACION(Nro_Habitacion),
 	PRIMARY KEY (Fecha_Llegada,Fecha_Salida,Nro_Habitacion,Id_Reserva)
