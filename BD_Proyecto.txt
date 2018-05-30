@@ -137,7 +137,7 @@ CREATE TABLE CLIENTE_TIPO_PAGO (
 CREATE TABLE RESERVA(
 	Id_Reserva INTEGER NOT NULL,
 	Pago REAL NULL,
-	Fecha_Hora_Entrada TIMESTAMP  NOT NULL,
+	Fecha_Hora_Entrada TIMESTAMP  NULL,
 	Fecha_Hora_Salida  TIMESTAMP  NULL,
 	Hora_Impresion TIME NULL, 
 	Id_Empleado VARCHAR (30) NOT NULL,
@@ -157,5 +157,23 @@ CREATE TABLE RESERVA_HABITACION(
 	FOREIGN KEY (Nro_Habitacion) REFERENCES HABITACION(Nro_Habitacion),
 	PRIMARY KEY (Fecha_Llegada,Fecha_Salida,Nro_Habitacion,Id_Reserva)
 );
+
+-- Secuencia Cliente
+
+CREATE SEQUENCE seq_reserva
+INCREMENT 5 START 9040;
+
+ALTER TABLE reserva 
+ALTER id_reserva 
+SET DEFAULT NEXTVAL ('seq_reserva');
+
+-- Secuencia Cliente
+
+CREATE SEQUENCE seq_cliente
+INCREMENT 5 START 9015;
+
+ALTER TABLE CLIENTE
+ALTER id_cliente 
+SET DEFAULT NEXTVAL ('seq_cliente');
 
 
